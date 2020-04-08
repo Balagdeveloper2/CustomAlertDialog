@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const_lt_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const_lt_top"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/rounded_corner_top"
+
+            >
+            <ImageView
+                android:id="@+id/img_rectangle"
+                android:layout_width="24dp"
+                android:layout_height="3dp"
+                android:src="@drawable/rectangle"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="16dp"/>
+
+            <TextView
+                android:id="@+id/tv_other_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other Amount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="18dp"/>
+
+
+            <TextView
+                android:id="@+id/tv_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="#0088C6"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="16dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingTop="48dp"
+            android:paddingBottom="48dp"
+            android:id="@+id/const_lt_middle"
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            app:layout_constraintTop_toBottomOf="@id/const_lt_top"
+            android:background="#F8F8F8">
+
+            <TextView
+                android:id="@+id/tv_enter_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Amount"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toTopOf="@+id/editText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+
+                />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="#F8F8F8"
+                android:inputType="numberDecimal"
+                android:text="$"
+                android:textAlignment="center"
+                android:textColor="#0088C6"
+                android:textSize="48dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_enter_amount"
+                tools:layout_editor_absoluteX="16dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.example.myappkotlin.MyKeyboard
+            android:id="@+id/keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/const_lt_middle"
+            android:background="#ECECEC"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

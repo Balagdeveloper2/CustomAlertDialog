@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="numberValue"
+            type="java.lang.String" />
+        <variable
+            name="alphabetValue"
+            type="java.lang.String" />
+    </data>
+    <!-- Payment Card View Content -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/carview_big_one"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{numberValue}"/>
+
+        <TextView
+            android:id="@+id/tv_alphabet"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@{alphabetValue}"
+            />
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
